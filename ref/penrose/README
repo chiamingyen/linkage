@@ -1,0 +1,31 @@
+This software requires Numpy ( http://numpy.scipy.org )
+     and PyOpenGL ( http://pyopengl.sf.net )
+
+To generate the nth iteration of the L-system for penrose tilings, as
+a mechanical linkage, use:
+    python penrose.py <n>
+which will output the linkage as saved-linkage.txt
+
+To fix all the angles of a linkage and then place a joint at the
+center of each rod, as in Junichi Yananose's "Transformable Penrose
+Tiling" ( http://www.polyhedra.jp/polyhedron/tr_penrose/zindex.html )
+use:
+    python transformable.py <linkage-file>
+which will again output the linkage as saved-linkage.txt
+
+To simulate linkages, use:
+    python main.py [<linkage-file>]
+(see http://mit.edu/harold/Public/linkage for more about simulating
+linkages)
+
+Thus to simply make a transformable penrose tiling of order 3, you
+would do:
+    python penrose.py 3
+    python transformable.py saved-linkage.txt
+and the resulting output would again be in saved-linkage.txt
+You could then view and simulate this linkage with:
+    python main.py saved-linkage.txt
+
+harold@mit.edu
+2007-06-15
+http://mit.edu/harold
